@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #cccccc;
+  font-family: "Yeon Sung", cursive;
+}
+
+header {
+  display: block;
+  width: 100%;
+  min-height: auto;
+  color: #fff;
+}
+
+/* Title */
+h1 {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 200px;
+  font-size: 50px;
+  font-weight: 1000;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/** SLIDESHOW **/
+.slideshow,
+.slideshow:after {
+  top: 1px;
+  /* Not sure why I needed this fix */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  z-index: 0;
+}
+
+.slideshow li span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 25s linear infinite 0s;
+}
+
+.slideshow li:nth-child(1) span {
+  background-image: url("images/landscape.png");
+}
+
+.slideshow li:nth-child(2) span {
+  background-image: url("images/penguin.png");
+  animation-delay: 6s;
+}
+
+.slideshow li:nth-child(3) span {
+  background-image: url("images/thunderstorm.png");
+  animation-delay: 12s;
+}
+
+.slideshow li:nth-child(4) span {
+  background-image: url("images/air.png");
+  animation-delay: 18s;
+}
+
+.slideshow li:nth-child(5) span {
+  background-image: url("images/bear.png");
+  animation-delay: 24s;
+}
+
+.slideshow li:nth-child(6) span {
+  background-image: url("images/fumes.png");
+  animation-delay: 30s;
+}
+
+.slideshow li:nth-child(7) span {
+  background-image: url("images/desert.png");
+  animation-delay: 36s;
+}
+
+.slideshow li:nth-child(8) span {
+  background-image: url("images/poster3.png");
+  animation-delay: 42s;
+}
+
+.slideshow li:nth-child(9) span {
+  background-image: url("images/poster2.png");
+  animation-delay: 48s;
+}
+
+.slideshow li:nth-child(10) span {
+  background-image: url("images/penguin_fam.png");
+  animation-delay: 54s;
+}
+
+.slideshow li:nth-child(11) span {
+  background-image: url("images/white_fox.png");
+  animation-delay: 60s;
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+
+  8% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+
+  17% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  17% {
+    opacity: 1;
+  }
+
+  19% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/********************************** Link Buttons ****************************/
+
+.btn-group {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  text-align: center;
+  padding-top: 457px;
+}
+.btn-group .btn {
+  box-shadow: none;
+}
+
+.btn-group .btn a {
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.btn {
+  font-family: "Yeon Sung", cursive;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding: 25px;
+  margin: 25px;
+  width: 10em;
+}
+
+.btn-violet {
+  background: linear-gradient(45deg, #4776e6, #8e54e9);
+  color: #fff;
+  border: 0;
+}
+
+.btn-green {
+  background: linear-gradient(45deg, #283c86, #45a247);
+  color: #fff;
+  border: 0;
+}
+
+.btn-pink {
+  background: linear-gradient(45deg, #ee0979, #ff6a00);
+  color: #fff;
+  border: 0;
+}
+
+.btn-blue {
+  background: linear-gradient(45deg, #17ead9, #6078ea);
+  color: #fff;
+  border: 0;
+}
+
+.effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+}
